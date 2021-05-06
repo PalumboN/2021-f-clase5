@@ -5,7 +5,8 @@ import Test.Hspec
 
 correrTests :: IO ()
 correrTests = hspec $ do
-  describe "Test de ejemplo" $ do
-    it "El pdepreludat se instaló correctamente" $ do
-      doble 1 `shouldBe` 2
-
+  describe "Materia aprobada" $ do
+    it "aprobo" $ do
+      [8, 9, 10] `shouldSatisfy` aprobo
+    it "no aprobo" $ do
+      [1, 2, 3] `shouldNotSatisfy` aprobo
